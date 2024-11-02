@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+</head>
+<body>
+    <h1>Random Quote Generator</h1>
+    <p id="quote">Press the button to get a quote!</p>
+    <button id="newQuoteBtn">New Quote</button>
+
+    <script>
+        const quotes = [
+            "The only limit to our realization of tomorrow is our doubts of today.",
+            "Do not wait to strike till the iron is hot, but make it hot by striking.",
+            "Life is 10% what happens to us and 90% how we react to it.",
+            "The best way to predict the future is to create it.",
+            "You only live once, but if you do it right, once is enough.",
+            "In the middle of every difficulty lies opportunity.",
+            "It does not matter how slowly you go as long as you do not stop."
+        ];
+
+        document.getElementById('newQuoteBtn').onclick = function() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input and Alert</title>
+</head>
+<body>
+    <input type="text" id="myInput" />
+    <button id="alertButton">Alert</button>
+
+    <script>
+        const inputField = document.getElementById("myInput");
+        const button = document.getElementById("alertButton");
+
+        inputField.addEventListener("change", () => {
+            console.log("Changed:", inputField.value);
+        });
+
+        button.addEventListener("click", () => {
+            alert(inputField.value); 
+        });
+    </script>
+</body>
+</html>
